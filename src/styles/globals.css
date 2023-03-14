@@ -17,7 +17,7 @@
         @apply bg-black
     }
     .hoverLinks{
-        @apply hover:text-gold-100 transition-all ease-in duration-100
+        @apply hover:text-gold-200 transition-all ease-in duration-100
     }
     .formInputs{
         @apply bg-white bg-opacity-0 border-gold-500 border-[1px] border-t-0 rounded-sm outline-none px-1

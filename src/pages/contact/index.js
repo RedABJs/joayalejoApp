@@ -4,8 +4,9 @@ import animations from "@/styles/animations.module.css";
 
 import MusicNoteRoundedIcon from "@mui/icons-material/MusicNoteRounded";
 import { toast } from "react-toastify";
-
 import HomeLayout from "@/components/HomeLayout";
+
+// const var1 = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATEID;
 
 const ContactUs = () => {
   const form = useRef();
@@ -80,10 +81,10 @@ const ContactUs = () => {
 
     emailjs
       .sendForm(
-        "contact_service",
-        "contact_form",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICEID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATEID,
         form.current,
-        "9Ij4yMcpFRayHP5iz"
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLICKEY
       )
       .then(
         (result) => {
@@ -133,11 +134,11 @@ const ContactUs = () => {
             <Image src={Saxo} fill />
           </figcaption> */}
           <div
-            className="bg-no-repeat bg-cover bg-center bg-[url('https://img4.goodfon.com/original/1366x768/7/2f/ulitsa-muzykant-saksofon.jpg')] 
+            className="bg-no-repeat bg-fixed bg-cover bg-center bg-[url('https://img4.goodfon.com/original/1366x768/7/2f/ulitsa-muzykant-saksofon.jpg')] 
                         h-screen w-screen flex justify-end items-center"
           >
             <form
-              className="flex flex-col w-[380px] gap-1 bg-white bg-opacity-90 h-full justify-center p-1 px-4"
+              className="flex flex-col sm:w-2/5 w-[380px] gap-1 bg-white bg-opacity-90 h-full justify-center p-1 px-4"
               id="contact-form"
               ref={form}
               onSubmit={sendEmail}
