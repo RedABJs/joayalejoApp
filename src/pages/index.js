@@ -14,9 +14,9 @@ export default function Home() {
     <HomeLayout>
       <figcaption className="h-screen bg-black relative">
         <Image className="opacity-40" src={MusicImg} fill alt="banner_img" />
-        <div className="absolute top-1/2 right-20 font-bold text-gold-400 text-center font-serif">
-          <h1 className="text-5xl">Joa y Alejo</h1>
-          <i className="text-3xl">¡Live Music!</i>
+        <div className="absolute top-1/2 sm:right-32 font-bold text-gold-400 text-center font-serif">
+          <h1 className="text-6xl">Joa y Alejo</h1>
+          <i className="text-4xl">¡Live Music!</i>
         </div>
       </figcaption>
       <section className="p-4">

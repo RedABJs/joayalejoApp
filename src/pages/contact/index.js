@@ -78,52 +78,75 @@ const ContactUs = () => {
     form.current.contact_number.value = 123;
 
     setLoading(true);
+    setTimeout(() => {
+      setFormVals({
+        user_name: "",
+        user_email: "",
+        message: "",
+      });
+      setValidated({
+        user_name: false,
+        user_email: false,
+        message: false,
+      });
+      setLoading(false);
+      toast.success("E-mail enviado correctamente", {
+        position: "bottom-left",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }, 2000);
 
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICEID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATEID,
-        form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLICKEY
-      )
-      .then(
-        (result) => {
-          setFormVals({
-            user_name: "",
-            user_email: "",
-            message: "",
-          });
-          setValidated({
-            user_name: false,
-            user_email: false,
-            message: false,
-          });
-          setLoading(false);
-          toast.success("E-mail enviado correctamente", {
-            position: "bottom-left",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          toast.error("Error en el envío", {
-            position: "bottom-left",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
-        }
-      );
+    // emailjs
+    //   .sendForm(
+    //     process.env.NEXT_PUBLIC_EMAILJS_SERVICEID,
+    //     process.env.NEXT_PUBLIC_EMAILJS_TEMPLATEID,
+    //     form.current,
+    //     process.env.NEXT_PUBLIC_EMAILJS_PUBLICKEY
+    //   )
+    //   .then(
+    //     (result) => {
+    //       setFormVals({
+    //         user_name: "",
+    //         user_email: "",
+    //         message: "",
+    //       });
+    //       setValidated({
+    //         user_name: false,
+    //         user_email: false,
+    //         message: false,
+    //       });
+    //       setLoading(false);
+    //       toast.success("E-mail enviado correctamente", {
+    //         position: "bottom-left",
+    //         autoClose: 2000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //         theme: "light",
+    //       });
+    //     },
+    //     (error) => {
+    //       setLoading(false);
+    //       toast.error("Error en el envío", {
+    //         position: "bottom-left",
+    //         autoClose: 2000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //         theme: "light",
+    //       });
+    //     }
+    //   );
   };
 
   return (
