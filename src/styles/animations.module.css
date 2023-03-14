@@ -1,0 +1,15 @@
+.loadingNoteAnimation{
+    animation: noteSpin 1s infinite linear;
+}
+
+@keyframes noteSpin {
+    from{
+        transform: rotate(-90deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(-90deg);
+    }
+}
