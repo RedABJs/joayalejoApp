@@ -19,7 +19,17 @@
     .hoverLinks{
         @apply hover:text-gold-200 transition-all ease-in duration-100
     }
+    .linksMenuRes{
+        @apply hover:bg-redwine
+    }
     .formInputs{
         @apply bg-white bg-opacity-0 border-gold-500 border-[1px] border-t-0 rounded-sm outline-none px-1
+    }
+    .active{
+        @apply opacity-100 visible translate-y-0 transition-all ease-linear duration-200
+
+    }
+    .inactive{
+        @apply opacity-0 invisible -translate-y-6 transition-all ease-linear duration-200
     }
 }

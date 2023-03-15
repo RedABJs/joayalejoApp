@@ -12,11 +12,17 @@ import HomeLayout from "@/components/HomeLayout";
 export default function Home() {
   return (
     <HomeLayout>
-      <figcaption className="h-screen bg-black relative">
-        <Image className="opacity-40" src={MusicImg} fill alt="banner_img" />
-        <div className="absolute top-1/2 sm:right-32 font-bold text-gold-400 text-center font-serif">
-          <h1 className="text-6xl">Joa y Alejo</h1>
-          <i className="text-4xl">¡Live Music!</i>
+      <figcaption className="h-screen bg-dark_gray sm:bg-black relative w-full flex items-center justify-center">
+        <Image
+          className="opacity-40 hidden sm:flex"
+          src={MusicImg}
+          fill
+          alt="banner_img"
+          priority
+        />
+        <div className="absolute sm:left-1/2 lg:left-2/3 font-bold text-gold-400 text-center font-serif">
+          <h1 className="text-5xl sm:text-6xl">Joa y Alejo</h1>
+          <i className="text-2xl sm:text-4xl">¡Live Music!</i>
         </div>
       </figcaption>
       <section className="p-4">
@@ -32,7 +38,7 @@ export default function Home() {
           Ratione nam ipsum eos consequatur porro, odio sunt?
         </p>
       </section>
-      <section className="grid grid-cols-2 w-full place-items-center gap-4 p-4">
+      <section className="grid grid-cols-1 sm:grid-cols-2 w-full place-items-center gap-4 p-4">
         <div className="relative overflow-hidden w-full pt-[56.25%]">
           <iframe
             className="absolute w-full h-full top-0"

@@ -161,7 +161,7 @@ const ContactUs = () => {
                         h-screen w-screen flex justify-end items-center"
           >
             <form
-              className="flex flex-col sm:w-2/5 w-[380px] gap-1 bg-white bg-opacity-90 h-full justify-center p-1 px-4"
+              className="flex flex-col sm:w-2/5 max-w-screen w-screen gap-1 bg-white bg-opacity-90 h-full justify-center p-1 px-4"
               id="contact-form"
               ref={form}
               onSubmit={sendEmail}
