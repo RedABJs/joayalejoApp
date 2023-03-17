@@ -30,12 +30,15 @@ const NavBar = () => {
     <>
       <header className="w-full z-10 fixed h-16 transition-all ease-out duration-200 delay-75 text-gold-400 hidden lg:flex">
         <nav className="w-full flex items-center h-full">
-          <ul className="flex ml-auto gap-4 px-1 hover:text-gold-400 sm:text-lg">
+          <ul className="flex ml-auto gap-4 px-4 hover:text-gold-400 sm:text-lg">
             <li className="hoverLinks">
               <Link href="/">Home</Link>
             </li>
             <li className="hoverLinks">
               <Link href="/contact">Contacto</Link>
+            </li>
+            <li className="hoverLinks">
+              <Link href="/services/1">ServiceRandom</Link>
             </li>
             <li className="hoverLinks">
               <Link href="/testingShit">Testing</Link>

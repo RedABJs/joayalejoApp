@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Footer from "./Footer/Footer";
 import NavBar from "./NavBar/NavBar";
+import WPIcon from "@/components/WhatsAppIcon/WPIcon";
 
 const HomeLayout = ({ children }) => {
   return (
@@ -14,6 +15,7 @@ const HomeLayout = ({ children }) => {
       <main className="max-w-screen min-h-screen h-fit mx-auto my-0 p-0 bg-white text-black">
         <NavBar />
         {children}
+        <WPIcon />
         <Footer />
       </main>
     </>

@@ -30,7 +30,9 @@ const NavBarRes = () => {
       <div className={`ml-auto flex flex-col w-full`}>
         <div
           onClick={() => setOpenMenu(!openMenu)}
-          className={`${openMenu ? "hidden" : "block"} ml-auto mr-4`}
+          className={`${
+            openMenu ? "hidden" : "block"
+          } text-gold-500 ml-auto mr-2 cursor-pointer`}
         >
           <MenuIcon sx={{ fontSize: 32 }} />
         </div>
@@ -39,25 +41,39 @@ const NavBarRes = () => {
             openMenu ? "active" : "inactive"
           } flex bg-black text-gold-400 absolute flex-col w-full items-center px-4`}
         >
-          <span className="self-end mt-1" name="close-icon">
+          <span
+            className="self-end mt-1 cursor-pointer hover:text-gold-100"
+            name="close-icon"
+          >
             <CloseIcon />
           </span>
           <ul
             ref={menuOptions}
             className="flex flex-col gap-2 p-2 items-center mb-4"
           >
-            <li className="linksMenuRes">
-              <Link href="/">Home</Link>
+            <li>
+              <Link className="linksMenuRes" href="/">
+                Home
+              </Link>
             </li>
-            <li className="linksMenuRes">
-              <Link href="/contact">Contacto</Link>
+            <li>
+              <Link className="linksMenuRes" href="/contact">
+                Contacto
+              </Link>
             </li>
-            <li className="linksMenuRes">
-              <Link href="/testingShit">Testing</Link>
+            <li>
+              <Link className="linksMenuRes" href="/services/1">
+                ServiceRandom
+              </Link>
+            </li>
+            <li>
+              <Link className="linksMenuRes" href="/testingShit">
+                Testing
+              </Link>
             </li>
             <li>
               <ul className="flex flex-row gap-2">
-                <li className="">
+                <li className="hover:text-gold-100">
                   <a
                     target={"_blank"}
                     href="https://www.facebook.com/JoayAlejoMusica"
@@ -65,7 +81,7 @@ const NavBarRes = () => {
                     <FacebookIcon />
                   </a>
                 </li>
-                <li className="">
+                <li className="hover:text-gold-100">
                   <a
                     target={"_blank"}
                     href="https://www.instagram.com/joa_y_alejo/"
@@ -73,7 +89,7 @@ const NavBarRes = () => {
                     <InstagramIcon />
                   </a>
                 </li>
-                <li className="">
+                <li className="hover:text-gold-100">
                   <a
                     target={"_blank"}
                     href="https://www.youtube.com/channel/UCTPl4noHkXjhXFklon-zyQg"

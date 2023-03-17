@@ -13,3 +13,28 @@
         transform: rotate(-90deg);
     }
 }
+
+.wpiApearence{
+    animation: wpiApereance 4s 1 linear;
+}
+
+@keyframes wpiApereance {
+    from{
+        /* opacity-0 invisible translate-x-6 transition-all ease-linear duration-200 */
+        opacity: 0;
+        visibility:hidden;
+        transform: translate(24px);
+        background: #000;
+    }
+    90%{
+        opacity: 0;
+        visibility:hidden;
+        transform: translate(24px);
+        background: #000;
+    }
+    to{
+        opacity: 100%;
+        visibility: visible;
+        transform: translate(0);
+    }
+}
