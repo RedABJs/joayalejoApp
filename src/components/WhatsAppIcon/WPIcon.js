@@ -1,39 +1,34 @@
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { useRef } from "react";
-import { useEffect } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import * as utils from "../../utils/utils";
 
 import animations from "@/styles/animations.module.css";
 
 const WPIcon = () => {
-  const wpi = useRef(null);
-
   useEffect(() => {
-    const handlerWPI = () => {
+    function handleWPI() {
       let mainHeigth = document.querySelector("main").clientHeight;
       let footerHeigth = document.querySelector("footer").clientHeight;
+      let ref = document.querySelector(".wpi");
 
       window.scrollY >= mainHeigth - window.innerHeight - footerHeigth &&
-      window.scrollY !== 0
-        ? wpi.current.classList.replace("showWPI", "hideWPI")
-        : wpi.current.classList.replace("hideWPI", "showWPI");
-    };
-
-    window.addEventListener("scroll", handlerWPI);
+      window.scrollY > 0
+        ? ref.classList.replace("showWPI", "hideWPI")
+        : ref.classList.replace("hideWPI", "showWPI");
+    }
+    window.addEventListener("scroll", handleWPI);
     return () => {
-      window.removeEventListener("scroll", handlerWPI);
+      window.removeEventListener("scroll", handleWPI);
     };
   }, []);
 
   return (
     <a
-      ref={wpi}
       href={
         "https://wa.me/573138653285?text=Quiero%20tener%20mas%20información%20sobre%20sus%20servicios"
       }
       target="_blank"
-      className={`${[
-        animations.wpiApearence,
-      ]} text-gold-400 z-10 fixed right-2 sm:right-3 bottom-2 bg-black flex items-center py-1 px-2 cursor-pointer rounded-md showWPI`}
+      className={`${[animations.wpiApearence]} showWPI wpi`}
     >
       <WhatsAppIcon sx={{ fontSize: 28 }} />
       <p className="text-sm">WhatsApp</p>

@@ -26,7 +26,7 @@ const NavBarRes = () => {
   }, []);
 
   return (
-    <div className="w-full lg:hidden absolute z-10">
+    <div className="w-full lg:hidden absolute z-20">
       <div className={`ml-auto flex flex-col w-full`}>
         <div
           onClick={() => setOpenMenu(!openMenu)}
@@ -63,7 +63,7 @@ const NavBarRes = () => {
             </li>
             <li>
               <Link className="linksMenuRes" href="/services/1">
-                ServiceRandom
+                Servicios
               </Link>
             </li>
             <li>

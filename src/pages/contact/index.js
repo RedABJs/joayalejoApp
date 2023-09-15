@@ -151,12 +151,17 @@ const ContactUs = () => {
 
   return (
     <HomeLayout>
-      <div
-        className="bg-no-repeat bg-fixed bg-cover bg-center bg-[url('https://img4.goodfon.com/original/1366x768/7/2f/ulitsa-muzykant-saksofon.jpg')] 
-                        h-screen w-screen flex justify-end items-center"
-      >
+      <div className="h-full max-w-screen w-full flex justify-end items-center relative overflow-hidden">
+        <div className="flex h-screen w-screen">
+          <img
+            className="objet-fit w-full"
+            src="https://res.cloudinary.com/cancionero/image/upload/v1694785451/piano_over_main_tu0qcu.webp"
+            alt="piano_bg"
+          />
+        </div>
         <form
-          className="flex flex-col sm:w-2/5 max-w-screen w-screen gap-1 bg-white bg-opacity-90 h-full justify-center p-1 px-4"
+          className="flex flex-col sm:w-2/5 max-w-screen w-screen gap-1 bg-white bg-opacity-80 h-full 
+                        justify-center p-1 px-4 absolute"
           id="contact-form"
           ref={form}
           onSubmit={sendEmail}

@@ -13,6 +13,10 @@ module.exports = {
       backgroundImage: {
         // "saxp-pattern": "url('./public/saxo.jpg')",
       },
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        "4x4": "repeat(2, minmax(0, 3fr))",
+      },
     },
     colors: {
       redwine: "#710000",

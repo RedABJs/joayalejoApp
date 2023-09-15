@@ -38,3 +38,19 @@
         transform: translate(0);
     }
 }
+
+.textAppereance {
+    transition: all ease-in-out;
+    animation: textAppear 0.7s 1 linear;
+}
+@keyframes textAppear {
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
